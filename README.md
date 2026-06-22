@@ -2,7 +2,7 @@
 
 Modular Python client for Anthropic Claude and Google Gemini APIs. Covers authentication, streaming, multi-turn chat, and error handling via official SDKs.
 
-Built as a hands-on study project to explore direct LLM API integration — going beyond high-level abstractions like N8N to understand what happens at the SDK level.
+Built as a hands-on study project to explore direct LLM API integration - going beyond high-level abstractions like N8N to understand what happens at the SDK level.
 
 ---
 
@@ -12,13 +12,13 @@ Built as a hands-on study project to explore direct LLM API integration — goin
 llm-api-client/
 ├── config.py          # API key, model name, temperature, system prompt
 ├── api_client.py      # All API communication logic (the only file that talks to Gemini)
-├── main.py            # Entry point — interactive menu, no API logic
+├── main.py            # Entry point - interactive menu, no API logic
 ├── list_models.py     # Utility: list models available for your API key
 ├── my_api_keys.py     # Secret store (git-ignored)
 └── requirements.txt   # Dependencies
 ```
 
-`main.py` is intentionally provider-agnostic — it only calls functions from `api_client.py`. Swapping Gemini for another provider only requires changing the imports.
+`main.py` is intentionally provider-agnostic - it only calls functions from `api_client.py`. Swapping Gemini for another provider only requires changing the imports.
 
 ---
 
@@ -26,7 +26,7 @@ llm-api-client/
 
 **1. Get a free API key**
 
-Go to [aistudio.google.com](https://aistudio.google.com) → Get API Key → Create API Key. No credit card required.
+Go to [aistudio.google.com](https://aistudio.google.com) > Get API Key > Create API Key. No credit card required.
 
 **2. Install the dependency**
 
@@ -88,7 +88,7 @@ Use streaming for chat interfaces or long responses where perceived latency matt
 
 ### Multi-turn chat and stateless APIs
 
-The Gemini API has no server-side session memory — every call is independent. To simulate a conversation, the client must resend the **full conversation history** on each request.
+The Gemini API has no server-side session memory - every call is independent. To simulate a conversation, the client must resend the **full conversation history** on each request.
 
 ```
 Turn 1: contents = [user_msg_1]
@@ -156,5 +156,5 @@ google-genai>=1.0.0
 ## Related projects
 
 This client is part of a broader portfolio covering direct LLM API integration:
-- **Anthropic SDK version** — same architecture targeting Claude models
-- **RAG pipeline** — LangChain + LangGraph + local inference via Ollama
+- **Anthropic SDK version** - same architecture targeting Claude models
+- **RAG pipeline** - LangChain + LangGraph + local inference via Ollama
